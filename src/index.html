@@ -12,6 +12,9 @@
       <div>
         Hi, i'm Igor. I have created this resource as play ground for my projects because I had some free time:) and perhaps as some kind of resume.
       </div>
+      <div>
+        To recap: at resolutions larger than 768px both main menu and portfolio filters on my site have drop-downs which are displayed on :hover. So on iPad I had to tap once on parent menu link to display the drop-down, and then tap the second time on some link in the drop-down to go to a new page. I am sure this sounds familiar to any tablet user. This way of interacting with menu seems fairly decent to me. Especially since clicking on another parent menu item will hide whatever drop-down menu was already open. This way we get almost exactly the type of interaction that happens if developer decides to use JavaScript click() method instead of CSS :hover to display drop-down menus. The annoying difference is that with properly-written JavaScript click() drop-downs will close if you click on the neighbor link, a link in drop-down, or ANYWHERE ELSE on the page. But with double tap the last drop-down displayed will hang on until you click a link in it and go to another URL. If you don’t click any links, it’ll just hang there.
+      </div>
     </div>
   </script>
 
@@ -52,19 +55,19 @@
 
   <header class="header">
     <ul class="header-list">
-      <li class="header-list-item">
+      <li class="header-list-item noselect">
         <a href="/" class="header-nav-link">Home</a>
       </li>
-      <li class="header-list-item dropdown cursor-pointer">
+      <li class="header-list-item dropdown cursor-pointer noselect">
         <div class="header-nav-link">Projects</div>
         <div class="dropdown-content">
-          <a href="/ikcv" class="header-nav-link">Current Site</a>
-          <a href="/manchkin-counter" class="header-nav-link align-left">Manchkin-Counter</a>
-          <a href="/mediatR-extension" class="header-nav-link align-left">MediatR-Extension</a>
+          <a href="/ikcv" class="header-nav-link noselect">Current Site</a>
+          <a href="/manchkin-counter" class="header-nav-link align-left noselect">Manchkin-Counter</a>
+          <a href="/mediatR-extension" class="header-nav-link align-left noselect">MediatR-Extension</a>
         </div>
       </li>
 
-      <li class="header-list-item m-l-auto">
+      <li class="header-list-item m-l-auto noselect">
         <a href="/about-me" class="header-nav-link">About me</a>
       </li>
     </ul>
