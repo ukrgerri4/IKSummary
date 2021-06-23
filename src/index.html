@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Igor Kryvenko</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <script id="home-template" type="text/x-handlebars-template">
+    <div>
+      <div>
+        Hi, i'm Igor. I have created this resource as play ground for my projects because I had some free time:) and perhaps as some kind of resume.
+      </div>
+    </div>
+  </script>
+
+  <script id="ikcv-template" type="text/x-handlebars-template">
+    <div>TEST IKCV!</div>
+  </script>
+
+  <script id="manchkin-counter-template" type="text/x-handlebars-template">
+    <div>TEST manchkin-counter</div>
+  </script>
+
+  <script id="mediatR-extension-template" type="text/x-handlebars-template">
+    <div>TEST mediatR-extension!</div>
+  </script>
+
+  <script id="about-me-template" type="text/x-handlebars-template">
+    <div class="d-flex justify-content-center">
+      <div class="about-container d-flex flex-row">
+        <div>
+          <h5>Summary:</h5>
+          <span>I have 4+ years of development middle size web applications, mostly using c# .Net and Angular frameworks.</span>
+          <h5>Work Experience:</h5>
+        </div>
+        <div>
+          <h5>Skills:</h5>
+          <div>
+            <ul>
+              <li>.Net Core</li>
+              <li>Angular</li>
+              <li>MSSQL, Postgresql</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <header class="header">
+    <ul class="header-list">
+      <li class="header-list-item">
+        <a href="/" class="header-nav-link">Home</a>
+      </li>
+      <li class="header-list-item dropdown cursor-pointer">
+        <div class="header-nav-link">Projects</div>
+        <div class="dropdown-content">
+          <a href="/ikcv" class="header-nav-link">Current Site</a>
+          <a href="/manchkin-counter" class="header-nav-link align-left">Manchkin-Counter</a>
+          <a href="/mediatR-extension" class="header-nav-link align-left">MediatR-Extension</a>
+        </div>
+      </li>
+
+      <li class="header-list-item m-l-auto">
+        <a href="/about-me" class="header-nav-link">About me</a>
+      </li>
+    </ul>
+  </header> 
+  <div id="app"></div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+version: "3.8"
+services:
+  ikcv_js:
+    image: ikcv_js:${TAG:-latest}
+    
