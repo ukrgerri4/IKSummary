@@ -1,24 +1,25 @@
 @import "colors.scss";
 
 .ui-link {
-    padding: 10px;
+	color: $base-text-color;
+	padding: 10px;
 
-    &:active {
-        background-color: $base-hover-color;
-    }
+	&:active {
+		background-color: $base-hover-color;
+	}
 
-    .ui-link-name {
-        font-size: 1rem;
-        font-weight: bolder;
-    }
+	.ui-link-name {
+		font-size: 1rem;
+		font-weight: bolder;
+	}
 
-    .ui-link-description {
-        font-size: 0.75rem;
-        font-weight: 200;
-    }
+	.ui-link-description {
+		font-size: 0.75rem;
+		font-weight: 200;
+	}
 }
 
 @media (hover: hover) {
-    .ui-link { background-color: $white; }
-    .ui-link:hover { background-color: $base-hover-color; }
+	.ui-link { background-color: $white; }
+	.ui-link:hover { background-color: $base-hover-color; }
 }

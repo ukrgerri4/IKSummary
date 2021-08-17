@@ -13,27 +13,27 @@
     <div class="d-flex flex-column align-items-center justify-content-center">
       <h2 class="text-align-center">Hi, on that dev server you can navigate under next UIs:</h2>
       <div class="d-flex flex-column">
-        <div class="ui-link cursor-pointer" onclick="window.open('https://31.43.122.153:40443', '_blank').focus()">
+        <a class="ui-link" href="https://31.43.122.153:40443" target="_blank">
           <span class="ui-link-name">Kibana Logs</span>
           <br/>
           <span class="ui-link-description">
             Logs of all applications are stored here. Logs don't contains sensitive data (at least should not contains:)).
           </span>
-        </div>
-        <div class="ui-link cursor-pointer" onclick="window.open('https://31.43.122.153:41443', '_blank').focus()">
+        </a>
+        <a class="ui-link" href="https://31.43.122.153:41443" target="_blank">
           <span class="ui-link-name">Identity Server</span>
           <br/>
           <span class="ui-link-description">
             Admin UI for simplify maintaining identity server data.
           </span>
-        </div>
-        <div class="ui-link cursor-pointer" onclick="window.open('https://31.43.122.153:42443', '_blank').focus()">
+        </a>
+        <a class="ui-link" href="https://31.43.122.153:42443" target="_blank">
           <span class="ui-link-name">NextCloud</span>
           <br/>
           <span class="ui-link-description">
             Just for fun my own cloud storage.
           </span>
-        </div>
+        </a>
       </div>
     </div>
   </script>
@@ -43,34 +43,31 @@
   </script>
 
   <script id="manchkin-counter-template" type="text/x-handlebars-template">
-    <div>TEST manchkin-counter</div>
+    <div class="d-flex align-items-center justify-content-center">
+			<img src="assets/waiting.gif" style="max-width: 90%;"/>
+		</div>
   </script>
 
   <script id="mediatR-extension-template" type="text/x-handlebars-template">
-    <div>TEST mediatR-extension!</div>
+		<div>
+			When I work with .net applications I like to use <a href="https://github.com/jbogard/MediatR" target="_blank">MeritR</a> library. This library gives opportunity to reduce complexity of dependencies and write more structure code.
+		</div>
+
+		<div>
+			But during my work I realized that I spend a lot of time to create folder strusture, separate files etc.
+			That's why I have created simple visual studio extension to make this process easier.
+		</div>
+    <div>
+			<span>GitHub repo:</span>
+			<a href="https://github.com/ukrgerri4/MediatRExtension" target="_blank">ukrgerri4/MediatRExtension</a>
+		</div>
+		<div>
+			<span>Download:</span>
+			<a href="https://marketplace.visualstudio.com/items?itemName=ukrgerri4.mediatrextension" target="_blank">ukrgerri4.mediatrextension</a>
+		</div>
   </script>
 
   <script id="about-me-template" type="text/x-handlebars-template">
-    <!-- <div class="d-flex justify-content-center">
-      <div class="about-container d-flex flex-row">
-        <div>
-          <h5>Summary:</h5>
-          <span>I have 4+ years of development middle size web applications, mostly using c# .Net and Angular frameworks.</span>
-          <h5>Work Experience:</h5>
-        </div>
-        <div>
-          <h5>Skills:</h5>
-          <div>
-            <ul>
-              <li>.Net Core</li>
-              <li>Angular</li>
-              <li>MSSQL, Postgresql</li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </script>
 
   <header class="header">
@@ -88,7 +85,7 @@
       </li>
 
       <li class="header-list-item m-l-auto noselect">
-        <a href="/about-me" class="header-nav-link">About me</a>
+        <a href="/about-me" class="header-nav-link">About</a>
       </li>
     </ul>
   </header> 

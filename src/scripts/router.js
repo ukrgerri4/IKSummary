@@ -44,12 +44,18 @@ export class Router {
 
   addListeners = () => {
     window.addEventListener('click', (event) => {
-      var target = event?.target
+      var eventTarget = event?.target
       
-      if (target.tagName == 'A') {
+      if (eventTarget.tagName == 'A') {
         event.preventDefault();
-        const pathTo = target.getAttribute('href');
-        this.self.navigateTo(pathTo);
+        const pathTo = eventTarget.getAttribute('href');
+				if (pathTo.startsWith("http")) {
+					const target = eventTarget.getAttribute('target');
+					window.open(pathTo, target);
+				}
+				else {
+					this.self.navigateTo(pathTo);
+				}
       }
     })
     window.addEventListener('DOMContentLoaded', (event) => {
