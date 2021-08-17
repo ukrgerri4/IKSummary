@@ -9,12 +9,31 @@
 <body>
 
   <script id="home-template" type="text/x-handlebars-template">
-    <div>
-      <div>
-        Hi, i'm Igor. I have created this resource as play ground for my projects because I had some free time:) and perhaps as some kind of resume.
-      </div>
-      <div>
-        To recap: at resolutions larger than 768px both main menu and portfolio filters on my site have drop-downs which are displayed on :hover. So on iPad I had to tap once on parent menu link to display the drop-down, and then tap the second time on some link in the drop-down to go to a new page. I am sure this sounds familiar to any tablet user. This way of interacting with menu seems fairly decent to me. Especially since clicking on another parent menu item will hide whatever drop-down menu was already open. This way we get almost exactly the type of interaction that happens if developer decides to use JavaScript click() method instead of CSS :hover to display drop-down menus. The annoying difference is that with properly-written JavaScript click() drop-downs will close if you click on the neighbor link, a link in drop-down, or ANYWHERE ELSE on the page. But with double tap the last drop-down displayed will hang on until you click a link in it and go to another URL. If you don’t click any links, it’ll just hang there.
+
+    <div class="d-flex flex-column align-items-center justify-content-center">
+      <h2 class="text-align-center">Hi, on that dev server you can navigate under next UIs:</h2>
+      <div class="d-flex flex-column">
+        <div class="ui-link cursor-pointer" onclick="window.open('https://31.43.122.153:40443', '_blank').focus()">
+          <span class="ui-link-name">Kibana Logs</span>
+          <br/>
+          <span class="ui-link-description">
+            Logs of all applications are stored here. Logs don't contains sensitive data (at least should not contains:)).
+          </span>
+        </div>
+        <div class="ui-link cursor-pointer" onclick="window.open('https://31.43.122.153:41443', '_blank').focus()">
+          <span class="ui-link-name">Identity Server</span>
+          <br/>
+          <span class="ui-link-description">
+            Admin UI for simplify maintaining identity server data.
+          </span>
+        </div>
+        <div class="ui-link cursor-pointer" onclick="window.open('https://31.43.122.153:42443', '_blank').focus()">
+          <span class="ui-link-name">NextCloud</span>
+          <br/>
+          <span class="ui-link-description">
+            Just for fun my own cloud storage.
+          </span>
+        </div>
       </div>
     </div>
   </script>
@@ -32,7 +51,7 @@
   </script>
 
   <script id="about-me-template" type="text/x-handlebars-template">
-    <div class="d-flex justify-content-center">
+    <!-- <div class="d-flex justify-content-center">
       <div class="about-container d-flex flex-row">
         <div>
           <h5>Summary:</h5>
@@ -51,7 +70,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </script>
 
   <header class="header">

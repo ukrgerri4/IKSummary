@@ -9,4 +9,4 @@ router
   .addRoute('/about-me', 'about-me-template')
   .addListeners();
 
-console.log(router);
+console.debug(router);

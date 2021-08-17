@@ -1,3 +1,5 @@
+@import "colors.scss";
+
 .header {
   position: sticky;
   display: flex;
@@ -10,9 +12,9 @@
   z-index: 1030;
   height: 50px;
   width: 100%;
-  background: #fff;
+  background: $white;
 
-  box-shadow: 0 2px 4px #0000001a;
+  box-shadow: 0 2px 4px $base-box-shadow;
 
   // @media (max-width: 480px) {
   //   height: auto;
@@ -41,14 +43,14 @@
       display: flex;
       align-items: center;
       font-weight: 500;
-      color: #416165;
+      color: $base-text-color;
       text-decoration: none;
 
       padding: 10px;
-      border-radius: 3px;
+      // border-radius: 3px;
 
       &:active {
-        background-color: #D9DBF1;
+        background-color: $base-hover-color;
       }
 
       &.align-left {
@@ -68,8 +70,8 @@
   top: 100%;
   left: 0;
   min-width: 160px;
-  background-color: #fff;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: $white;
+  box-shadow: 0px 8px 16px 0px $base-box-shadow;
   z-index: 1030;
 }
 
@@ -77,6 +79,6 @@
 .dropdown:not(:hover) .dropdown-content { display: none; }
 
 @media (hover: hover) {
-  .header-nav-link { background-color: #fff; }
-  .header-nav-link:hover { background-color: #D9DBF1; }
+  .header-nav-link { background-color: $white; }
+  .header-nav-link:hover { background-color: $base-hover-color; }
 }

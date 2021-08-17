@@ -1,8 +1,10 @@
 @import "reboot.css";
+@import "colors.scss";
 @import "header.scss";
+@import "home.scss";
 
 html, body {
-  color: #0B3948;
+  color: $base-text-color;
 }
 
 .m-l-auto {
@@ -29,6 +31,10 @@ html, body {
   justify-content: center;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -51,7 +57,7 @@ html, body {
   height: 297mm;
   width: 210mm;
   margin: 0;
-  box-shadow: 0 0 4px #0000001a;
+  box-shadow: 0 0 4px $base-box-shadow;
 
   @media (max-width: 480px) {
     height: auto;

@@ -1,10 +1,11 @@
 version: "3.8"
 services:
-  ikcv_js:
+  ikcv:
+    image: ikcv-dev:${TAG:-latest}
     build: 
       context: .
       dockerfile: Dockerfile.Development
-    container_name: ikcv_js_dev
+    container_name: ikcv-dev
     ports:
       - "4200:4200"
     volumes:
