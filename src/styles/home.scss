@@ -4,10 +4,6 @@
 	color: $base-text-color;
 	padding: 10px;
 
-	&:active {
-		background-color: $base-hover-color;
-	}
-
 	.ui-link-name {
 		font-size: 1rem;
 		font-weight: bolder;

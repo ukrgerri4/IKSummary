@@ -4,7 +4,7 @@ WORKDIR /app
 # Copy and install local npm packages
 COPY ./package.json ./
 COPY ./package-lock.json ./
-RUN npm install
+RUN npm install --no-optional
 # Copy the remaining source code
 COPY . .
 RUN npm run build

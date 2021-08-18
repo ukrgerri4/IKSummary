@@ -48,10 +48,6 @@
       padding: 10px;
       // border-radius: 3px;
 
-      &:active {
-        background-color: $base-hover-color;
-      }
-
       &.align-left {
         justify-content: start;
       }

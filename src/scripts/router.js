@@ -42,6 +42,10 @@ export class Router {
     history.replaceState(null, null, pathResolved);
   };
 
+  /* 
+   * Added listener for all <a> tag click
+   * In case internal redirect i.e url do NOT starts with 'http' navigates to template 
+  */ 
   addListeners = () => {
     window.addEventListener('click', (event) => {
       var eventTarget = event?.target

@@ -24,3 +24,17 @@
 
   ## Run
   docker-compose up
+
+
+# Problems:
+  ## Assets
+    - Due to documentation https://webpack.js.org/guides/asset-modules/ there is a possibility 
+      to simply use this rule:
+        {
+          test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+          type: 'asset/resource',
+        }
+      but for me it is not working, thats why I just use 'copy-webpack-plugin' and copy
+      all my assets to dist folder.
+
+        
