@@ -109,8 +109,8 @@
         <a href="/" class="header-nav-link">Home</a>
       </li>
       <li class="header-list-item dropdown cursor-pointer noselect">
-        <div class="header-nav-link" onclick="onDropdownClick(this)">Projects</div>
-        <div class="dropdown-content" onclick="onDropdownContentClick(this)">
+        <div class="header-nav-link" onclick="onDropdownClick(event, this)">Projects</div>
+        <div class="dropdown-content">
           <a href="/ikcv" class="header-nav-link noselect">Current Site</a>
           <a href="/manchkin-counter" class="header-nav-link align-left noselect">Manchkin-Counter</a>
           <a href="/mediatR-extension" class="header-nav-link align-left noselect">MediatR-Extension</a>
@@ -125,17 +125,23 @@
   </header> 
   <div id="app"></div>
 	<script type="text/javascript">
-		function onDropdownClick(e) {
-			if (!e) { return; }
-			const dropdownContent = e.parentElement.querySelector('.dropdown-content');
-			if (!dropdownContent) { return; }
-			const isDropdownOpened = dropdownContent.style.display == 'block';
-			dropdownContent.style.display = isDropdownOpened ? 'none' : 'block';
+		window.addEventListener('click', closeDropdown);
+
+		function onDropdownClick(event, element) {
+			if (event) { event.stopPropagation(); }
+			if (!element) { return; }
+			const dropdownContent = element.parentElement.querySelector('.dropdown-content');
+			if (dropdownContent) { 
+				const isDropdownOpened = dropdownContent.style.display == 'block';
+				dropdownContent.style.display = isDropdownOpened ? 'none' : 'block';
+			}
 		}
 
-		function onDropdownContentClick(e) {
-			if (!e) { return; }
-			e.style.display = 'none';
+		function closeDropdown(event) {
+			var dropdownContents = document.getElementsByClassName('dropdown-content');
+			if (dropdownContents && dropdownContents.length) {
+				dropdownContents[0].style.display = 'none';
+			}
 		}
 	</script>
 </body>
