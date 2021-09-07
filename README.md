@@ -1,17 +1,17 @@
-# IKSummary
+# ikcv-jsnative
 
 # IMPORTANT
-  Due to implement routing by myself there are some limitation while use <a> tag.
-		1. All outside redirections must starts with 'http' or 'https'
-			Exapmles: 
-				Good:
+  Due to implement routing by myself there are some limitation while use <a> tag. \
+		1. All outside redirections must starts with 'http' or 'https' \
+			Exapmles: \
+				Good: \
 					```
-					<a href="https://example.com" target="_blank">Example</a>
-					<a href="http://example.com">Example</a>
+					<a href="https://example.com" target="_blank">Example</a> \
+					<a href="http://example.com">Example</a> \
 					```
-				Bad:
+				Bad: \
 					```
-					<a href="example.com" target="_blank">Example</a>
+					<a href="example.com" target="_blank">Example</a> \
 					```
 
 
@@ -30,7 +30,7 @@
   docker-compose up
 
 
-# Problems:
+# Troubleshooting:
   ## Assets
     - Due to documentation https://webpack.js.org/guides/asset-modules/ there is a possibility 
       to simply use this rule:
