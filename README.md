@@ -2,19 +2,14 @@
 
 # IMPORTANT
 Due to implement routing by myself there are some limitation while use ```<a>``` tag.<br/>
-1. All outside redirections must starts with 'http' or 'https'<br/>
-
-Exapmles:<br/>
-
-Good:<br/>
-
-`<a href="https://example.com" target="_blank">Good example</a>`<br/>
-`<a href="http://example.com">Good example</a>`<br/>
-
-Bad:<br/>
-
-`<a href="example.com" target="_blank">Bad example</a>`<br/>
-`<a href="www.example.com" target="_blank">Bad example</a>`<br/>
+&nbsp;&nbsp;All outside redirections must starts with 'http' or 'https'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Exapmles:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Good:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<a href="https://example.com" target="_blank">Good example</a>`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<a href="http://example.com">Good example</a>`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bad:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<a href="example.com" target="_blank">Bad example</a>`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<a href="www.example.com" target="_blank">Bad example</a>`<br/>
 
 # Production
 
