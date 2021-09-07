@@ -3,7 +3,13 @@
 .ui-link {
 	color: $base-text-color;
 	padding: 10px;
-	margin: 2px 4px 4px 2px;
+	margin: 2px 4px 2px 4px;
+
+	background-color: $white;
+
+	&:hover {
+		background-color: $base-hover-color;
+	}
 
 	.ui-link-name {
 		font-size: 1rem;
@@ -16,7 +22,7 @@
 	}
 }
 
-@media (hover: hover) {
-	.ui-link { background-color: $white; }
-	.ui-link:hover { background-color: $base-hover-color; }
-}
+// @media (hover: hover) {
+// 	.ui-link { background-color: $white; }
+// 	.ui-link:hover { background-color: $base-hover-color; }
+// }

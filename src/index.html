@@ -90,7 +90,7 @@
 
   <script id="server-structure-template" type="text/x-handlebars-template">
     <div class="project-container">
-      <img src="./assets/server-structure.svg" style="max-width: 75%;"/>
+      <img src="./assets/server-structure.svg" class="server-img"/>
     </div>
   </script>
 
@@ -129,7 +129,8 @@
 			if (!e) { return; }
 			const dropdownContent = e.parentElement.querySelector('.dropdown-content');
 			if (!dropdownContent) { return; }
-			dropdownContent.style.display = 'block';
+			const isDropdownOpened = dropdownContent.style.display == 'block';
+			dropdownContent.style.display = isDropdownOpened ? 'none' : 'block';
 		}
 
 		function onDropdownContentClick(e) {
