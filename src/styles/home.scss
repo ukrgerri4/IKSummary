@@ -3,6 +3,7 @@
 .ui-link {
 	color: $base-text-color;
 	padding: 10px;
+	margin: 2px 4px 4px 2px;
 
 	.ui-link-name {
 		font-size: 1rem;
@@ -10,7 +11,7 @@
 	}
 
 	.ui-link-description {
-		font-size: 0.75rem;
+		font-size: 1rem;
 		font-weight: 200;
 	}
 }

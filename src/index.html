@@ -10,7 +10,7 @@
 
   <script id="home-template" type="text/x-handlebars-template">
 
-    <div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="d-flex flex-fill flex-column align-items-center">
       <h2 class="text-align-center">Hi, on that dev server you can navigate under next UIs:</h2>
       <div class="d-flex flex-column">
         <a class="ui-link" href="https://31.43.122.153:40443" target="_blank">
@@ -24,7 +24,7 @@
           <span class="ui-link-name">Identity Server</span>
           <br/>
           <span class="ui-link-description">
-            Admin UI for simplify maintaining identity server data. (Could be not available)
+            Admin UI for simplify maintaining identity server data. (Could be temporarily not available)
           </span>
         </a>
         <a class="ui-link" href="https://31.43.122.153:42443" target="_blank">
@@ -39,45 +39,57 @@
   </script>
 
   <script id="ikcv-template" type="text/x-handlebars-template">
-		<div>
-			Light weight UI created with webpack. Supports creating development and production docker containers.
-		</div>
-		<div>
-			<span>GitHub repo:</span>
-			<a href="https://github.com/ukrgerri4/MunchkinCounter" target="_blank">ManchkinCounter</a>
+		<div class="project-container">
+			<div class="project-container-page">
+				<div>
+					Light weight UI created with webpack. Solution contains scripts for creating development and production docker containers.
+				</div>
+				<div>
+					<span>GitHub:</span>
+					<a href="https://github.com/ukrgerri4/ikcv-jsnative" target="_blank">ikcv-jsnative</a>
+				</div>
+			</div>
 		</div>
   </script>
 
   <script id="manchkin-counter-template" type="text/x-handlebars-template">
-		<div>
-			Munchkin Counter. An android application developed with Xamarin. Helps to count score while playing munchkin, implemented custom async server socket for local multiplayer.
-		</div>
-		<div>
-			<span>GitHub repo:</span>
-			<a href="https://github.com/ukrgerri4/MunchkinCounter" target="_blank">ManchkinCounter</a>
-		</div>
-		<div>
-			<span>Download:</span>
-			<a href="https://play.google.com/store/apps/details?id=com.kivgroupua.munchkincounterlan" target="_blank">ManchkinCounter</a>
+		<div class="project-container">
+			<div class="project-container-page">
+				<div>
+					Munchkin Counter. An android application developed with Xamarin. Helps to count score while playing munchkin, implemented custom async server socket for local multiplayer.
+				</div>
+				<div>
+					<span>GitHub:</span>
+					<a href="https://github.com/ukrgerri4/MunchkinCounter" target="_blank">ManchkinCounter</a>
+				</div>
+				<div>
+					<span>Download:</span>
+					<a href="https://play.google.com/store/apps/details?id=com.kivgroupua.munchkincounterlan" target="_blank">ManchkinCounter</a>
+				</div>
+			</div>
 		</div>
   </script>
 
   <script id="mediatR-extension-template" type="text/x-handlebars-template">
-		<div>
-      Simple <a href="https://github.com/jbogard/MediatR" target="_blank">MeritR</a> extension for visual studio. Simplified way to create base mediatr objects with certain structure.
+		<div class="project-container">
+			<div class="project-container-page">
+				<div>
+					Simple <a href="https://github.com/jbogard/MediatR" target="_blank">MeritR</a> extension for visual studio. Simplified way to create base mediatr objects with certain structure.
+				</div>
+				<div>
+					<span>GitHub:</span>
+					<a href="https://github.com/ukrgerri4/MediatRExtension" target="_blank">MediatRExtension</a>
+				</div>
+				<div>
+					<span>Download:</span>
+					<a href="https://marketplace.visualstudio.com/items?itemName=ukrgerri4.mediatrextension" target="_blank">MediatRExtension</a>
+				</div>
 		</div>
-    <div>
-			<span>GitHub repo:</span>
-			<a href="https://github.com/ukrgerri4/MediatRExtension" target="_blank">ukrgerri4/MediatRExtension</a>
-		</div>
-		<div>
-			<span>Download:</span>
-			<a href="https://marketplace.visualstudio.com/items?itemName=ukrgerri4.mediatrextension" target="_blank">ukrgerri4.mediatrextension</a>
-		</div>
+	</div>
   </script>
 
   <script id="server-structure-template" type="text/x-handlebars-template">
-    <div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="project-container">
       <img src="./assets/server-structure.svg" style="max-width: 75%;"/>
     </div>
   </script>
@@ -86,8 +98,8 @@
   </script>
 
   <script id="is-being-developed-template" type="text/x-handlebars-template">
-    <div class="d-flex flex-column align-items-center justify-content-center" style="margin-top: 50px;">
-      <span>is being developed...</span>
+    <div class="d-flex flex-fill flex-column align-items-center justify-content-center">
+      <h2>is being developed...</h2>
     </div>
   </script>
 
@@ -97,8 +109,8 @@
         <a href="/" class="header-nav-link">Home</a>
       </li>
       <li class="header-list-item dropdown cursor-pointer noselect">
-        <div class="header-nav-link">Projects</div>
-        <div class="dropdown-content">
+        <div class="header-nav-link" onclick="onDropdownClick(this)">Projects</div>
+        <div class="dropdown-content" onclick="onDropdownContentClick(this)">
           <a href="/ikcv" class="header-nav-link noselect">Current Site</a>
           <a href="/manchkin-counter" class="header-nav-link align-left noselect">Manchkin-Counter</a>
           <a href="/mediatR-extension" class="header-nav-link align-left noselect">MediatR-Extension</a>
@@ -112,5 +124,18 @@
     </ul>
   </header> 
   <div id="app"></div>
+	<script type="text/javascript">
+		function onDropdownClick(e) {
+			if (!e) { return; }
+			const dropdownContent = e.parentElement.querySelector('.dropdown-content');
+			if (!dropdownContent) { return; }
+			dropdownContent.style.display = 'block';
+		}
+
+		function onDropdownContentClick(e) {
+			if (!e) { return; }
+			e.style.display = 'none';
+		}
+	</script>
 </body>
 </html>

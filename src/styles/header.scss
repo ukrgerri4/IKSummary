@@ -1,7 +1,7 @@
 @import "colors.scss";
 
 .header {
-  position: sticky;
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -70,8 +70,8 @@
   z-index: 1030;
 }
 
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown:not(:hover) .dropdown-content { display: none; }
+// .dropdown:hover .dropdown-content { display: block; }
+// .dropdown:not(:hover) .dropdown-content { display: none; }
 
 @media (hover: hover) {
   .header-nav-link { background-color: $white; }
