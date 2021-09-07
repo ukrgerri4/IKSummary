@@ -1,0 +1,7 @@
+FROM node:lts
+
+# Set working directory
+WORKDIR /app
+# Copy and install local npm packages
+COPY package*.json .
+RUN npm install
