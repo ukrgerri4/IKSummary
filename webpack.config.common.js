@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext]'
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -24,6 +25,13 @@ module.exports = {
         exclude: /[\\/]node_modules[\\/]/,
         use: {
           loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          minimize: true,
         },
       },
     ]

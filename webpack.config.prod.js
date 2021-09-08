@@ -28,22 +28,22 @@ module.exports = merge(commonConfig, {
         ],
       },
       // Not working for me https://webpack.js.org/guides/asset-modules/
-      // {
-      //   test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-      //   type: 'asset/resource',
-      // },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'src/assets',
-          to: 'assets',
-          noErrorOnMissing: true,
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: 'src/assets',
+    //       to: 'assets',
+    //       noErrorOnMissing: true,
+    //     },
+    //   ],
+    // }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),

@@ -10,9 +10,3 @@ services:
       dockerfile: Dockerfile
     expose:
       - "80"
-#     volumes:
-#         - ikcv_nm:/app/node_modules
-#     # stdin_open: true
-#     # tty: true
-# volumes: 
-#   ikcv_nm:
