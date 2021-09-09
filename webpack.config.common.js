@@ -7,6 +7,10 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+<<<<<<< HEAD
+=======
+    assetModuleFilename: 'assets/[hash][ext]'
+>>>>>>> dev
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -26,6 +30,16 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+<<<<<<< HEAD
+=======
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          minimize: true,
+        },
+      },
+>>>>>>> dev
     ]
   }
 }
