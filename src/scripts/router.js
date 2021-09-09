@@ -7,19 +7,12 @@ export class Router {
     this.routes = {}; 
   }
 
-  templateResolver = (id) => {
-    const app_element = document.getElementById(this.rootDivId);
-    const template = document.getElementById(id);
-    app_element.innerHTML = template.innerHTML;
-    return app_element;
-  };
-
-  addRoute = (path, templateName) => {
+  addRoute = (path, templateName, templateHtml) => {
     this.self.routes[path] = {
       path: path,
       template: {
         name: templateName,
-        resolver: this.self.templateResolver
+        html: templateHtml
       }
     };
     return this;
@@ -27,9 +20,9 @@ export class Router {
 
   resolveRoute = (path) => {
     try {
-      var x = this.self.routes[path];
       const route = this.self.routes[path] || this.self.routes[this.self.defaultPath];
-      route.template.resolver(route.template.name);
+      const app_element = document.getElementById(this.rootDivId);
+      app_element.innerHTML = route.template.html;
       return route.path;
     } catch (error) {
         throw new Error("The route is not defined");

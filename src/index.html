@@ -7,102 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-  <script id="home-template" type="text/x-handlebars-template">
-
-    <div class="d-flex flex-fill flex-column align-items-center">
-      <h2 class="text-align-center">Hi, on that dev server you can navigate under next UIs:</h2>
-      <div class="d-flex flex-column">
-        <a class="ui-link" href="https://31.43.122.153:40443" target="_blank">
-          <span class="ui-link-name">Kibana Logs</span>
-          <br/>
-          <span class="ui-link-description">
-            Logs of all applications are stored here. Logs don't contains sensitive data (at least should not contains:)).
-          </span>
-        </a>
-        <a class="ui-link" href="https://31.43.122.153:41443" target="_blank">
-          <span class="ui-link-name">Identity Server</span>
-          <br/>
-          <span class="ui-link-description">
-            Admin UI for simplify maintaining identity server data. (Could be temporarily not available)
-          </span>
-        </a>
-        <a class="ui-link" href="https://31.43.122.153:42443" target="_blank">
-          <span class="ui-link-name">NextCloud</span>
-          <br/>
-          <span class="ui-link-description">
-            Just for fun my own cloud storage.
-          </span>
-        </a>
-      </div>
-    </div>
-  </script>
-
-  <script id="ikcv-template" type="text/x-handlebars-template">
-		<div class="project-container">
-			<div class="project-container-page">
-				<div>
-					Light weight UI created with webpack. Solution contains scripts for creating development and production docker containers.
-				</div>
-				<div>
-					<span>GitHub:</span>
-					<a href="https://github.com/ukrgerri4/ikcv-jsnative" target="_blank">ikcv-jsnative</a>
-				</div>
-			</div>
-		</div>
-  </script>
-
-  <script id="manchkin-counter-template" type="text/x-handlebars-template">
-		<div class="project-container">
-			<div class="project-container-page">
-				<div>
-					Munchkin Counter. An android application developed with Xamarin. Helps to count score while playing munchkin, implemented custom async server socket for local multiplayer.
-				</div>
-				<div>
-					<span>GitHub:</span>
-					<a href="https://github.com/ukrgerri4/MunchkinCounter" target="_blank">ManchkinCounter</a>
-				</div>
-				<div>
-					<span>Download:</span>
-					<a href="https://play.google.com/store/apps/details?id=com.kivgroupua.munchkincounterlan" target="_blank">ManchkinCounter</a>
-				</div>
-			</div>
-		</div>
-  </script>
-
-  <script id="mediatR-extension-template" type="text/x-handlebars-template">
-		<div class="project-container">
-			<div class="project-container-page">
-				<div>
-					Simple <a href="https://github.com/jbogard/MediatR" target="_blank">MeritR</a> extension for visual studio. Simplified way to create base mediatr objects with certain structure.
-				</div>
-				<div>
-					<span>GitHub:</span>
-					<a href="https://github.com/ukrgerri4/MediatRExtension" target="_blank">MediatRExtension</a>
-				</div>
-				<div>
-					<span>Download:</span>
-					<a href="https://marketplace.visualstudio.com/items?itemName=ukrgerri4.mediatrextension" target="_blank">MediatRExtension</a>
-				</div>
-		</div>
-	</div>
-  </script>
-
-  <script id="server-structure-template" type="text/x-handlebars-template">
-    <div class="project-container">
-      <img src="./assets/server-structure.svg" class="server-img"/>
-    </div>
-  </script>
-
-  <script id="about-me-template" type="text/x-handlebars-template">
-  </script>
-
-  <script id="is-being-developed-template" type="text/x-handlebars-template">
-    <div class="d-flex flex-fill flex-column align-items-center justify-content-center">
-      <h2>is being developed...</h2>
-    </div>
-  </script>
-
   <header class="header">
     <ul class="header-list">
       <li class="header-list-item noselect">
@@ -113,17 +17,19 @@
         <div class="dropdown-content">
           <a href="/ikcv" class="header-nav-link noselect">Current Site</a>
           <a href="/manchkin-counter" class="header-nav-link align-left noselect">Manchkin-Counter</a>
-          <a href="/mediatR-extension" class="header-nav-link align-left noselect">MediatR-Extension</a>
+          <a href="/mediatr-extension" class="header-nav-link align-left noselect">Mediatr-Extension</a>
           <a href="/server-structure" class="header-nav-link align-left noselect">Server Structure</a>
         </div>
       </li>
 
       <li class="header-list-item m-l-auto noselect">
-        <a href="/about-me" class="header-nav-link">About</a>
+        <a href="/about" class="header-nav-link">About</a>
       </li>
     </ul>
-  </header> 
+  </header>
+
   <div id="app"></div>
+
 	<script type="text/javascript">
 		window.addEventListener('click', closeDropdown);
 

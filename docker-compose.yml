@@ -9,6 +9,7 @@ services:
       context: .
       dockerfile: Dockerfile
     expose:
+<<<<<<< HEAD
       - "80"
 #     volumes:
 #         - ikcv_nm:/app/node_modules
@@ -16,3 +17,6 @@ services:
 #     # tty: true
 # volumes: 
 #   ikcv_nm:
+=======
+      - "80"
+>>>>>>> dev
