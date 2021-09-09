@@ -24,6 +24,7 @@ Due to implement routing by myself there are some limitation while use ```<a>```
   docker-compose build
 
   ## Run
+<<<<<<< HEAD
   docker-compose up
 
 
@@ -40,3 +41,6 @@ Due to implement routing by myself there are some limitation while use ```<a>```
       all my assets to dist folder.
 
         
+=======
+  docker-compose up
+>>>>>>> dev
