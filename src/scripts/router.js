@@ -41,7 +41,7 @@ export class Router {
 			path: pathResolved
 		}
 
-		if (path == window.location.pathname) {
+		if (path == window.location.pathname) { // if redirect to same page
 			history.replaceState(state, null, pathResolved);
 		}
 		else {
@@ -73,6 +73,8 @@ export class Router {
 		window.addEventListener('DOMContentLoaded', (event) => {
       const pathTo = window.location.pathname;
       this.self.navigateTo(pathTo);
+
+			// TODO: read/test if this event triggered only once, maybe we can unsubscribe
     });
 
 		window.addEventListener('popstate', (event) => {
