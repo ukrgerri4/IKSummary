@@ -18,6 +18,11 @@ Due to implement routing by myself there are some limitation while use ```<a>```
   ## Push
   docker push ukrgerri4/ikcv:latest
 
+  ## Then on server
+	docker-compose pull
+	docker-compose down
+	docker-compose up -d
+
 # Development
 
   ## Build
