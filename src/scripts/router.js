@@ -4,7 +4,10 @@ export class Router {
     this.self = this;
     this.rootDivId = 'app';
     this.defaultPath = '/';
-    this.routes = {}; 
+    this.routes = {};
+
+		this.mode = 'history'; // or 'hash'
+		this.historyIndex = history?.state?.index && !Number.isNaN(history.state.index) ? history.state.index : -1;
   }
 
   addRoute = (path, templateName, templateHtml) => {
@@ -31,8 +34,19 @@ export class Router {
 
   navigateTo = (pathTo) => {
     const path = pathTo || this.self.defaultPath;
-    const pathResolved = this.self.resolveRoute(path);
-    history.replaceState(null, null, pathResolved);
+		const pathResolved = this.self.resolveRoute(path);
+
+		var state = { 
+			index: history?.state?.index && !Number.isNaN(history.state.index) ? history.state.index + 1 : 0,
+			path: pathResolved
+		}
+
+		if (path == window.location.pathname) {
+			history.replaceState(state, null, pathResolved);
+		}
+		else {
+			history.pushState(state, null, pathResolved);
+		}
   };
 
   /* 
@@ -55,9 +69,15 @@ export class Router {
 				}
       }
     })
-    window.addEventListener('DOMContentLoaded', (event) => {
+    
+		window.addEventListener('DOMContentLoaded', (event) => {
       const pathTo = window.location.pathname;
       this.self.navigateTo(pathTo);
     });
+
+		window.addEventListener('popstate', (event) => {
+			if (!event?.state) { return; }
+			this.self.navigateTo(event.state.path);
+		});
   }
 }
